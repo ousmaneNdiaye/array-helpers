@@ -25,7 +25,7 @@ composer require jdrieghe/array-helpers
 
 You can choose to use only the static helper methods.
 
-```
+```php
 use ArrayHelpers\Arr;
 
 $result = Arr::get($array, $key, $default);
@@ -35,7 +35,7 @@ $result = Arr::get($array, $key, $default);
 
 If you prefer a more functional approach, some namespaced convenience methods are available as well:
 
-```
+```php
 use function ArrayHelpers\array_get;
 
 $result = array_get($array, $key, $default);
@@ -48,7 +48,7 @@ $result = array_get($array, $key, $default);
 This helper allows you to get an item from an array using dot notation.
 If the item is not found, it will return a given default or null.
 
-```
+```php
 $data = [
     'foo' => [
         'bar' => 'baz',
@@ -71,7 +71,7 @@ Note that `Arr::get()` can be replaced with `array_get()` if you prefer a functi
 
 This helper checks if an item exists in an array using dot notation.
 
-```
+```php
 $data = [
     'foo' => [
         'bar' => 'baz',
@@ -95,13 +95,14 @@ Note that `Arr::has()` can be replaced with `array_has()` if you prefer a functi
 This helper sets a certain key in an array to a certain value.
 Dot notation can be used to create a deeply nested key.
 
-```
+```php
 $data = [];
 Arr::set($data, 'foo.bar', 'baz');
 ```
 
 `$data` now contains:
-```
+
+```php
 [
     'foo' => [
         'bar' => 'baz',
